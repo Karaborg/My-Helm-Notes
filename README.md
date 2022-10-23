@@ -9,8 +9,7 @@ This is me taking notes on GitHub while learning `Helm`. I will probably be goin
 - Helm is maintained by the **CNCF - The Cloud Native Computing Foundation** (together with Kubernetes, fluentd, linkerd etc.)
 
 ## Setup
-- Download helm client
-- Run helm init
+You can install `Helm` with the following [Helm Installation Document](https://helm.sh/docs/intro/install/) 
 
 ## Common Commands
 ```
@@ -35,3 +34,15 @@ helm upgrade
 # Rollback a release to previous version
 helm rollback
 ```
+
+## Creating Custom Helm Charts
+It is the recommended way to deploy custom applications on Kubernetes. Packaging the app, allows us deploy the app in 1 command instead of using `kubectl create/apply`.
+
+To create the files necessary for a new chart, you can enter the command: `helm create mychart`. This will create a path named `mychart` and insert **yaml** files under the folder like shown below:
+
+- mychart/
+  - Chart.yaml
+  - values.yaml
+  - templates/
+    - deployment.yaml
+    - service.yaml
