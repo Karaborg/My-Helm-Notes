@@ -46,3 +46,4 @@ To create the files necessary for a new chart, you can enter the command: `helm 
   - templates/
     - deployment.yaml
     - service.yaml
+
